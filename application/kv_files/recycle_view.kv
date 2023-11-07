@@ -1,0 +1,15 @@
+#:kivy 1.8
+#: import CustomButton application.widgets.custom_button
+#: import Factory kivy.factory.Factory
+
+
+<CustomRecycleView>:
+    viewclass: 'CustomButton'
+
+    RecycleBoxLayout:
+        orientation: 'vertical'
+        padding: '10dp'
+        default_size: None, dp(56)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height

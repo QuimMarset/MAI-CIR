@@ -1,0 +1,7 @@
+__pycache__/
+.vscode/
+*.npy
+MSSL_*/
+*.pth
+datasets*/
+/src/application/videos/*

@@ -1,0 +1,231 @@
+{
+    "Running_Time": 1043.835,
+    "Numbers 0-9": {
+        "Theory": 213.142,
+        "Practise": 0,
+        "Games": [
+            {
+                "Sequence": [
+                    "MultiChoice",
+                    "MultiChoice",
+                    "MultiChoiceInverse",
+                    "MultiChoice",
+                    "MultiChoice",
+                    "NumberGapFilling",
+                    "NumberGapFilling"
+                ],
+                "Mistakes": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "Time": 43.412
+            }
+        ],
+        "Exam": {
+            "Scores": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "Mistakes": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "Names": [
+                "SignDetection",
+                "NumberGapFilling",
+                "MemoryGame",
+                "NumberGapFilling",
+                "MultiChoiceInverse",
+                "MultiChoice",
+                "MultiChoice",
+                "MemoryGame",
+                "MultiChoiceInverse",
+                "MemoryGame"
+            ],
+            "Time": 131.153
+        },
+        "Time": 387.707,
+        "Completed": true
+    },
+    "Vowels": {
+        "Theory": 38.23,
+        "Practise": 20.331,
+        "Games": [
+            {
+                "Sequence": [
+                    "WordGapFilling",
+                    "MultiChoiceInverse",
+                    "MultiChoice",
+                    "MultiChoice",
+                    "MultiChoiceInverse",
+                    "MultiChoiceInverse",
+                    "MemoryGame"
+                ],
+                "Mistakes": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "Time": 44.534
+            }
+        ],
+        "Exam": {
+            "Scores": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.75
+            ],
+            "Mistakes": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "Names": [
+                "SignDetection",
+                "MultiChoiceInverse",
+                "MultiChoice",
+                "MemoryGame",
+                "MemoryGame",
+                "MemoryGame",
+                "MultiChoice",
+                "MultiChoiceInverse",
+                "WordGapFilling",
+                "WordGapFilling"
+            ],
+            "Time": 112.92
+        },
+        "Time": 216.015,
+        "Completed": true
+    },
+    "Consonants B-J": {
+        "Theory": 132.461,
+        "Practise": 0,
+        "Games": [],
+        "Exam": {
+            "Scores": [
+                0.75,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                0.75,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "Mistakes": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0
+            ],
+            "Names": [
+                "MultiChoiceInverse",
+                "MultiChoice",
+                "MultiChoice",
+                "MultiChoiceInverse",
+                "MemoryGame",
+                "MemoryGame",
+                "WordGapFilling",
+                "SignDetection",
+                "MemoryGame",
+                "WordGapFilling"
+            ],
+            "Time": 85.335
+        },
+        "Time": 217.796,
+        "Completed": true
+    },
+    "Words 1": {
+        "Theory": 82.837,
+        "Practise": 0,
+        "Games": [],
+        "Exam": {
+            "Scores": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "Mistakes": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "Names": [
+                "MemoryGame",
+                "SignDetection",
+                "MultiChoice",
+                "MemoryGame",
+                "MultiChoice",
+                "MultiChoice",
+                "MultiChoiceInverse",
+                "MultiChoiceInverse",
+                "MemoryGame",
+                "MultiChoiceInverse"
+            ],
+            "Time": 59.049
+        },
+        "Time": 141.886,
+        "Completed": true
+    }
+}

@@ -1,0 +1,15 @@
+#:kivy 1.8
+
+
+<CustomButton>:
+    background_normal: ''
+
+    canvas.before:
+        Color:
+            rgba: self.border_color
+        Line:
+            width: self.border_width
+            rectangle: self.x, self.y, self.width, self.height
+
+    color: self.text_color
+    bold: True

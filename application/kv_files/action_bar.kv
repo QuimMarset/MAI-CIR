@@ -1,0 +1,24 @@
+#:kivy 1.8
+
+
+<CustomActionBar>:
+
+    background_image: ""
+    background_color: root.background_color
+    
+    ActionView:
+        use_separator: True
+        previous_icon: root.previous_icon
+        
+        CustomActionPrevious:
+            id: previous
+            markup: True
+            title: '[size=' + str(root.font_size) + '][b]' + root.title + '[/b][/size]'
+            app_icon: ''
+            size_x: 50
+            
+
+        ActionButton:
+            id: main
+            icon: root.main_icon
+            text_color: root.text_color

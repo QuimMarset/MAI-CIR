@@ -1,0 +1,8 @@
+"Marca temporal","Name","Age","Gender","Education level","Are you familiar with some deaf people?","Did you already know some Sign Language?","Q1","Q2","Q3","Q4","Q5","O1"
+"2023/01/07 12:58:11 p. m. CET","Roger Bertran","26","Men","Master’s degree","No","No","2","5","3","2","3","I liked the simplicity of the GUI, which allowed a very fast and intuitive use. Since I was in the only-video version, I missed being able to play more with sign detection, rather than only having a one-sided and without much interaction experience."
+"2023/01/07 1:02:31 p. m. CET","Yuzuri Hikita","27","Women","Bachelor’s degree","No","No","3","5","3","3","4","sometimes detection failed"
+"2023/01/07 6:21:18 p. m. CET","Anna","23","Women","Master’s degree","No","No","4","5","3","2","1","Some practice"
+"2023/01/05 3:29:03 p. m. CET","Ferran Gil","25","Men","Some college credit, no degree","No","Yes","2","5","2","2","4","M'ha agradat que és una forma dinàmica i entretinguda d'aprendre. He trobat a faltar més proves amb la camèra, més interactives amb l'usuari"
+"2023/01/07 12:10:21 a. m. CET","David","24","Men","Master’s degree","No","No","3","5","2","1","3","The sign detector was meh. But worked with the detection of chair, the moat difficult detection"
+"2023/01/10 12:34:40 a. m. CET","Juan","31","Men","Bachelor’s degree","No","No","1","5","1","2","4","I think is easy and also the detection was good. I tried to fool the model but it had shown good behaviour."
+"2023/01/10 12:34:40 a. m. CET","Alex","26","Men","Master’s degree","No","No","3","5","2","2","3","Sometimes the detection failed, for example in chair it was so frustrating because I tried different times and I could not"

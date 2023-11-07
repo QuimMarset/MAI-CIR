@@ -1,0 +1,96 @@
+#:kivy 1.8
+#: import CustomButton application.widgets.custom_button
+#: import CustomSpinner application.widgets.custom_spinner
+
+
+
+<SignDetectionWithSelectorScreen>:
+
+    GridLayout:
+        rows: 2
+        spacing: '5dp'
+        padding: '10dp'
+
+        Label:
+            bold: True
+            font_size: root.medium_font_size
+            color: root.text_color
+            text: root.instructions_text
+            size_hint_y: 0.1
+
+
+        GridLayout:
+            cols: 2
+            spacing: '2dp'
+
+            GridLayout:
+                rows: 3
+                size_hint_x: 0.5
+
+                GridLayout:
+                    cols: 2
+                    spacing: '2dp'
+                
+                    Label:
+                        bold: True
+                        font_size: root.small_font_size
+                        color: root.text_color
+                        text: 'Expected sign:'
+
+                    AnchorLayout:
+                        anchor_x: 'left'
+                        CustomSpinner:
+                            id: signs_spinner
+                            values: root.spinner_values
+                            on_text: root.spinner_selection(signs_spinner.text)
+                            size_hint_y: 0.25
+
+                GridLayout:
+                    cols: 2
+                    spacing: '2dp'
+
+                    Label:
+                        bold: True
+                        font_size: root.small_font_size
+                        color: root.text_color
+                        text: 'Predicted sign:'
+
+                    AnchorLayout:
+                        anchor_x: 'left'
+                        Label:
+                            canvas.before:
+                                Color:
+                                    rgba: root.answer_color
+                                Line:
+                                    width: root.border_width
+                                    rectangle: self.x, self.y, self.width, self.height
+                            bold: True
+                            font_size: root.small_font_size
+                            color: root.text_color
+                            text: root.predicted_sign
+                            size_hint_y: 0.25
+
+                AnchorLayout:
+                    CustomButton:
+                        id: start_detection_button
+                        on_release: root.start_sign_detection_callback()
+                        background_color: root.button_color
+                        font_size: root.small_font_size
+                        color: root.text_color
+                        text: 'Start Detection'
+                        size_hint: 0.6, 0.3
+
+            GridLayout:
+                rows: 2
+                spacing: '10dp'
+
+                Image:
+                    id: reference
+                    background_normal: ''
+                    color: root.window_background if root.reference_image_source == '' else [1, 1, 1, 1]
+                    source: root.reference_image_source
+                    anim_delay: 1 / 25
+                    size_hint_y: 0.6
+
+                Image:
+                    id: camera

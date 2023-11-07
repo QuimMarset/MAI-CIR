@@ -1,0 +1,24 @@
+#:kivy 1.8
+
+<ImageToggleButton>:
+
+    size_hint_x: root.size_hint_x
+    state_image: self.background_normal if self.state == 'normal' else self.background_down
+    disabled_image: self.background_disabled_normal if self.state == 'normal' else self.background_disabled_down
+    background_normal: ""
+
+    canvas.before:
+        Color:
+            rgba: root.border_color
+        Line:
+            width: root.border_width
+            rectangle: self.x, self.y, self.width, self.height
+
+    Image:
+        id: image
+        anim_delay: 1 / 25
+        source: root.image_source
+        width: self.parent.width
+        height: self.parent.height
+        y: self.parent.y
+        x: self.parent.x

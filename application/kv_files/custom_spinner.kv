@@ -1,0 +1,52 @@
+#:kivy 1.8
+#:import Factory kivy.factory.Factory
+
+
+
+<CustomSpinnerOption>:
+    canvas.before:
+        Color:
+            rgba: self.border_color
+        Line:
+            width: self.border_width
+            rectangle: self.x, self.y, self.width, self.height
+    background_color: self.background_color
+    background_normal: ''
+    color: self.text_color
+    bold: True
+
+
+<CustomSpinner>:
+    
+    canvas.before:
+        Color:
+            rgba: self.border_color
+        Line:
+            width: self.border_width
+            rectangle: self.x, self.y, self.width, self.height
+    
+    font_size: 0
+    background_normal: ''
+    background_color: self.background_color
+    background_down: ''
+    option_cls: Factory.get('CustomSpinnerOption')
+
+    GridLayout:
+        cols: 2
+        pos: self.parent.pos
+        size: self.parent.size
+        padding: '2dp'
+
+        Label:
+            bold: True
+            font_size: root.label_font_size
+            color: root.text_color
+            text: root.label_text
+            size_hint_x: 0.9
+
+        Image:
+            source: root.collapse_arrow if root.is_open == True else root.expand_arrow
+            size_hint_x: 0.15
+            pos_hint_x: 0.85
+            x: self.parent.parent.x + self.parent.parent.width - self.width
+            y: self.parent.parent.y

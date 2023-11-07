@@ -1,0 +1,32 @@
+#:kivy 1.8.0
+
+
+<ImageButton>:
+    
+    anchor_x: 'center'
+    anchor_y: 'center'
+
+    state_image: self.background_normal if self.state == 'normal' else self.background_down
+    disabled_image: self.background_disabled_normal if self.state == 'normal' else self.background_disabled_down
+    background_normal: ""
+
+    canvas.before:
+        Color:
+            rgba: root.border_color
+        Line:
+            width: root.border_width
+            rectangle: self.x, self.y, self.width, self.height
+
+    canvas:
+        Color:
+            rgba: root.background_color
+        BorderImage:
+            border: self.border
+            pos: self.pos
+            size: self.size
+            source: self.disabled_image if self.disabled else self.state_image
+            
+    Image:
+        source: root.image_source
+        size_hint: 0.9, 0.9
+        anim_delay: 1 / 25

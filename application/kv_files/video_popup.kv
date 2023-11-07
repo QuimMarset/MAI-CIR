@@ -1,0 +1,39 @@
+#:kivy 1.8
+#: import CustomButton application.widgets.custom_button
+#: import CustomVideoPlayer application.widgets.custom_videoplayer
+
+
+<VideoPopup>:
+
+    canvas.before:
+        Color:
+            rgba: root.border_color
+        Line:
+            width: root.border_width + 2
+            rectangle: self.x, self.y, self.width, self.height
+
+    auto_dismiss: True
+    background: ''
+    separator_height: 0
+    size_hint: 0.8, 0.8
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        AnchorLayout:
+            size_hint_y: 0.8
+            CustomVideoPlayer:
+                id: player
+                source: root.video_source
+                size_hint: 0.9, 0.9
+                state: 'play'
+                options: {'eos': 'loop'}
+
+        AnchorLayout:
+            anchor_x: 'center'
+            anchor_y: 'center'
+            size_hint_y: 0.2
+            CustomButton:
+                text: root.button_text
+                on_release: root.button_callback()
+                size_hint: 0.6, 0.6

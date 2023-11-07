@@ -1,0 +1,42 @@
+#:kivy 1.8.0
+#:import hex kivy.utils.get_color_from_hex
+
+
+<ImageLabelButton>:
+    
+    orientation: 'vertical'
+    background_normal: ""
+    state_image: self.background_normal if self.state == 'normal' else self.background_down
+    disabled_image: self.background_disabled_normal if self.state == 'normal' else self.background_disabled_down
+    
+    canvas.before:
+        Color:
+            rgba: root.border_color
+        Line:
+            width: root.border_width
+            rectangle: self.x, self.y, self.width, self.height
+    canvas:
+        Color:
+            rgba: root.background_color
+        BorderImage:
+            border: self.border
+            pos: self.pos
+            size: self.size
+            source: self.disabled_image if self.disabled else self.state_image
+    
+    AnchorLayout:
+        size_hint_y: 0.7
+        Image:
+            id: image
+            source: root.image_source
+            size_hint: 0.8, 0.8
+            anim_delay: 1 / 25
+            mipmap: True
+    
+    Label:
+        id: label
+        bold: True
+        text: root.text
+        color: root.text_color
+        font_size: root.font_size
+        size_hint_y: 0.2

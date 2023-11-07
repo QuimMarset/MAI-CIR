@@ -1,0 +1,16 @@
+#:kivy 1.8
+
+
+<CustomToggleButton>:
+
+    background_normal: ''
+
+    canvas.before:
+        Color:
+            rgba: root.border_color
+        Line:
+            width: root.border_width
+            rectangle: self.x, self.y, self.width, self.height
+
+    bold: True
+    color: root.text_color

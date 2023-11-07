@@ -1,0 +1,100 @@
+#:kivy 1.8
+#: import CustomButton application.widgets.custom_button
+
+
+<SignDetectionScreen>:
+
+    GridLayout:
+        rows: 2
+        padding: '10dp'
+        spacing: '10dp'
+
+        Label:
+            bold: True
+            font_size: root.medium_font_size
+            color: root.text_color
+            text: root.instructions_text
+            size_hint_y: 0.1
+
+        GridLayout:
+            cols: 2
+            spacing: '15dp'
+
+            GridLayout:
+                size_hint_x: 0.4
+                rows: 4
+                padding: '10dp'
+                spacing: '10dp'
+
+                GridLayout:
+                    cols: 2
+                    spacing: '2dp'
+
+                    Label:
+                        bold: True
+                        font_size: root.small_font_size
+                        color: root.text_color
+                        text: 'Expected sign:'
+
+                    AnchorLayout:
+                        anchor_x: 'left'
+                        Label:
+                            canvas.before:
+                                Color:
+                                    rgba: root.border_color
+                                Line:
+                                    width: root.border_width
+                                    rectangle: self.x, self.y, self.width, self.height
+                            bold: True
+                            font_size: root.small_font_size
+                            color: root.text_color
+                            text: root.expected_sign
+                            size_hint_y: 0.3
+
+                GridLayout:
+                    cols: 2
+                    spacing: '2dp'
+
+                    Label:
+                        bold: True
+                        font_size: root.small_font_size
+                        color: root.text_color
+                        text: 'Predicted sign:'
+
+                    AnchorLayout:
+                        anchor_x: 'left'
+                        Label:
+                            canvas.before:
+                                Color:
+                                    rgba: root.answer_color
+                                Line:
+                                    width: root.border_width
+                                    rectangle: self.x, self.y, self.width, self.height
+                            bold: True
+                            font_size: root.small_font_size
+                            color: root.text_color
+                            text: root.predicted_sign
+                            size_hint_y: 0.3
+                
+                AnchorLayout:
+                    CustomButton:
+                        on_release: root.start_sign_detection_callback()
+                        background_color: root.button_color
+                        text: 'Start Detection'
+                        text_color: root.text_color
+                        font_size: root.small_font_size
+                        size_hint: 0.6, 0.4
+
+                AnchorLayout:
+                    CustomButton:
+                        on_release: root.create_yes_no_popup()
+                        background_color: root.button_color
+                        text: 'Continue'
+                        text_color: root.text_color
+                        font_size: root.small_font_size
+                        size_hint: 0.6, 0.4
+                    
+
+            Image:
+                id: camera
+                size_hint_x: 0.6
